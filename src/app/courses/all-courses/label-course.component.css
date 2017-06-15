@@ -1,0 +1,37 @@
+.label-course {
+  padding: 10px 0 10px;
+  overflow: hidden;
+}
+
+.label-course .label-type {
+  font-weight: 700;
+  font-size: 14px;
+  color: #666;
+  width: 60px;
+  text-align: right;
+  padding: 8px;
+  margin-right: -65px;
+}
+
+.label-course .label-type::after {
+  content: ':';
+  display: block;
+  float: right;
+}
+
+.label-course .label-name {
+  margin-left: 65px;
+  font-size: 14px;
+}
+
+.label-course .label-name span {
+  padding: 8px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.label-course .label-name span.active {
+  background-color: #2b333b;
+  color: white;
+  border-radius: 5px;
+}

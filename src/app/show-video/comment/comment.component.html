@@ -1,0 +1,50 @@
+<div class="comment row" *ngIf="commentItem">
+  <div class="col-1 comment-img">
+    <img src="assets/images/1.jpg" alt=""/>
+  </div>
+  <div class="col-11">
+    <div class="comment-me">
+      <div class="comment-name">
+        {{commentItem['presenterName']}}
+      </div>
+      <p class="comment-content">
+        {{commentItem['content']}}
+      </p>
+      <div class="comment-info clearfix">
+        <div class="comment-time to-left">
+          {{commentItem['publicationTime'] | date:'y-MM-dd H:mm'}}
+        </div>
+        <div class="comment-reply to-right">
+          <span>回复</span><i class="fa fa-commenting-o"></i>
+          <span>点赞</span><i class="fa fa-thumbs-up"></i>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngIf="commentItem['children']">
+      <div class="comment-other row" *ngFor="let item of commentItem['children']">
+        <div class="col-1 comment-img-other">
+          <img src="assets/images/1.jpg" alt=""/>
+        </div>
+        <div class="col-11">
+          <span class="comment-name-other">
+            {{item['answererName']}}
+          </span>
+          <span class="comment-reply-other" *ngIf="item['presenterName']">
+            {{item['presenterName']}}
+          </span>
+          <span class="comment-content-other">
+            {{item['content']}}
+          </span>
+          <div class="comment-info clearfix">
+            <div class="comment-time to-left">
+              {{item['publicationTime'] | date:'y-MM-dd H:mm'}}
+            </div>
+            <div class="comment-reply to-right">
+              <span>回复</span><i class="fa fa-commenting-o"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

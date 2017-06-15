@@ -1,0 +1,11 @@
+<div class="label-course clearfix" *ngIf="labelTag">
+  <div class="label-type to-left">
+    {{labelTag.labelName}}
+  </div>
+  <div class="label-name to-left">
+    <span class="active to-left">全部</span>
+    <span class="to-left" *ngFor="let item of labelTag.tagArr">
+      {{item.tagName}}
+    </span>
+  </div>
+</div>

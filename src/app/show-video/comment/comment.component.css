@@ -1,0 +1,46 @@
+.comment .comment-img img{
+  border-radius: 50%;
+  width: 40px;
+}
+
+.comment .comment-name {
+  color: #6d757a;
+  font-size: 12px;
+}
+
+.comment .comment-content {
+  font-size: 14px;
+}
+
+.comment .comment-info {
+  font-size: 12px;
+  color: #99a2aa;
+}
+
+.comment .comment-info .comment-reply span, .comment .comment-info .comment-reply i{
+  margin-left: 5px;
+}
+
+.comment-other {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.comment-other .comment-img-other img{
+  border-radius: 50%;
+  width: 30px;
+}
+
+.comment-other .comment-name-other {
+  color: #6d757a;
+}
+
+.comment-other .comment-reply-other::before {
+  content: '回复';
+  display: inline-block;
+}
+
+.comment-other .comment-reply-other::after {
+  content: ':';
+  display: inline-block;
+}

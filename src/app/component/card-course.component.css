@@ -1,0 +1,66 @@
+.card {
+  width: 230px;
+  height: 220px;
+  box-shadow: 0 2px 2px 0 #eee;
+  /*border-radius: 10px;*/
+  border: none;
+}
+
+.card a {
+  position: relative;
+  color: black;
+}
+
+.card .card-img-top img{
+  width: 100%;
+  height: 140px;
+  /*border-top-left-radius: 10px;
+  border-top-right-radius: 10px;*/
+}
+
+.card .card-block {
+  position: relative;
+  bottom: 0px;
+  height: 80px;
+  padding: 15px;
+}
+
+.card .card-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card .card-text {
+  display: none;
+  /*opacity: 0;*/
+  height: 0px;
+  overflow: hidden;
+  font-size: 12px;
+  /*transition: opacity 0.5s;*/
+}
+
+.card .card-course-fa {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.card .card-course-fa span{
+  margin-right: 15px;
+}
+
+.card:hover a {
+  text-decoration: none;
+  box-shadow: 0 4px 20px 4px #ddd;
+}
+
+.card:hover .card-block {
+  bottom: 60px;
+  background-color: white;
+}
+
+.card:hover .card-text {
+  display: block;
+  height: 50px;
+  /*opacity: 1;*/
+}

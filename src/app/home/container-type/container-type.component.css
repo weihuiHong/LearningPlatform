@@ -1,0 +1,30 @@
+.type-header {
+  margin-bottom: 10px;
+}
+
+.type-header span {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.type-header a {
+  color: #93999f;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.type-header a i{
+  margin-left: 10px;
+}
+
+.type-content {
+  margin-bottom: 20px;
+}
+
+.type-content .type-content-item {
+  margin-right: 63px;
+}
+
+.type-content .type-content-item:last-child {
+  margin-right: 0px;
+}

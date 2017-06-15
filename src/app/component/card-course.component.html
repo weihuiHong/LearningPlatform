@@ -1,0 +1,21 @@
+<div class="card" *ngIf="courseItem">
+  <a href="#" [routerLink]="['/video', courseItem.src]">
+    <div class="card-img-top">
+      <img src="{{courseItem.image || 'assets/images/cardCourse.png'}}" alt=""/>
+    </div>
+    <div class="card-block">
+      <div class="card-title">
+        {{courseItem.resourceName}}
+      </div>
+      <div class="card-text">
+        {{courseItem.description}}
+      </div>
+      <div class="card-course-fa">
+        <i class="fa fa-users"></i>
+        <span>130人学习</span>
+        <i class="fa fa-play-circle"></i>
+        <span>{{courseItem.views}}次播放</span>
+      </div>
+    </div>
+  </a>
+</div>
