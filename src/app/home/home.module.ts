@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { ComponentModule } from '../component/component.module';
 
 import { HomeComponent } from './home.component';
+import { HomeSideComponent } from './home-side/home-side.component';
 import { ContainerTypeComponent } from './container-type/container-type.component';
 import { NewsComponent } from './news/news.component';
 
@@ -18,6 +19,7 @@ import { HomeService } from './home.service';
   ],
   declarations: [
     HomeComponent,
+    HomeSideComponent,
     ContainerTypeComponent,
     NewsComponent
   ],

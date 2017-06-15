@@ -28,3 +28,13 @@
 .type-content .type-content-item:last-child {
   margin-right: 0px;
 }
+
+.type-content .type-content-item-image {
+  width: 523px;
+  height: 220px;
+}
+
+.type-content .type-content-item-image img {
+  width: 100%;
+  height: 100%;
+}

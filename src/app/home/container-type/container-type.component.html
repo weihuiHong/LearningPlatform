@@ -3,32 +3,41 @@
     <span>{{name}}</span>
     <a href="" class="to-right">更多<i class="fa fa-angle-right"></i></a>
   </div>
-  <div class="type-content clearfix">
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
+  <ng-container *ngIf="first">
+    <div class="type-content clearfix">
+      <div class="type-content-item to-left type-content-item-image">
+        <img src="assets/images/cardCourse.png" alt=""/>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
     </div>
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
+    <div class="type-content clearfix">
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
     </div>
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
+  </ng-container>
+  <ng-container *ngIf="!first">
+    <div class="type-content clearfix">
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
+      <div class="type-content-item to-left">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
     </div>
-    <div class="type-content-item to-left" *ngIf="num==4">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
-    </div>
-  </div>
-  <div class="type-content clearfix" *ngIf="num!=4">
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
-    </div>
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
-    </div>
-    <div class="type-content-item to-left">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
-    </div>
-    <div class="type-content-item to-left" *ngIf="num==4">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
-    </div>
-  </div>
+  </ng-container>
 </div>
