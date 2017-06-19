@@ -2,3 +2,7 @@
   background-color: white;
   box-shadow: 0 0 4px 0 #ccc;
 }
+
+.container {
+  padding-top: 70px;
+}

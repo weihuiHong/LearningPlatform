@@ -30,15 +30,19 @@
               {{item.menuName}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" *ngFor="let child of item.children">
+              <a class="dropdown-item" *ngFor="let child of item.children">
                 {{child.menuName}}
               </a>
             </div>
           </ng-container>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/courses">全部课程</a>
+          <a class="nav-link" routerLink="/courses">全部课程</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/forum">论坛</a>
+        </li>
+        
       </ul>
       <form class="form-inline my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="搜索">
@@ -55,3 +59,7 @@
     </div>
   </nav>
 </header>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

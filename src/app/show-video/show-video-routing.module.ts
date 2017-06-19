@@ -4,10 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShowVideoComponent } from './show-video.component';
 
 const showVideoRoutes: Routes = [
-  {
-    path: 'video/:src',
-    component: ShowVideoComponent
-  }
+  // {
+  //   path: 'video/:src',
+  //   component: ShowVideoComponent
+  // }
 ];
 
 @NgModule({
