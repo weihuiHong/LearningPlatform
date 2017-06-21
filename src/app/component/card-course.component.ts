@@ -9,6 +9,6 @@ export class CardCourseComponent implements OnInit{
   @Input() courseItem: Object;
 
   ngOnInit () {
-    console.log(this.courseItem['src']);
+    
   }
 }

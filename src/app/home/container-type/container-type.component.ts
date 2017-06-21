@@ -9,4 +9,5 @@ export class ContainerTypeComponent {
   @Input() name: string;
   @Input() courseItem: Object;
   @Input() first: boolean;
+  @Input() filter: Array<string>;
 }

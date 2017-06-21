@@ -8,6 +8,8 @@ import { PagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { AppComponent } from './app.component';
     PagesModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -28,13 +28,13 @@
   <h-home-side></h-home-side>
   <div class="row home-content">
     <div class="col-9">
-      <h-container-type [name]="containerTypeNameArr[0]" [courseItem]="courseItem" [first]=true></h-container-type>
+      <h-container-type [name]="containerTypeNameArr[0]['title']" [courseItem]="courseItem" [first]=true [filter]="containerTypeNameArr[0]['filter']"></h-container-type>
     </div>
     <div class="col-3">
       <h-news></h-news>
     </div>
   </div>
-  <div class="home-content" *ngFor="let item of containerTypeNameArr">
-    <h-container-type [name]="item" [courseItem]="courseItem" [first]=false></h-container-type>
+  <div class="home-content" *ngFor="let item of containerTypeNameArr.slice(1, containerTypeNameArr.length)">
+    <h-container-type [name]="item['title']" [courseItem]="courseItem" [first]=false [filter]="item['filter']"></h-container-type>
   </div>
 </div>

@@ -17,6 +17,22 @@
   margin-left: 10px;
 }
 
+.type-filter {
+  font-size: 16px !important;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.type-filter::after {
+  content: '|';
+  display: inline-block;
+}
+
+.type-header .type-filter:last-child::after {
+  content: ' ';
+  display: inline-block;
+}
+
 .type-content {
   margin-bottom: 20px;
 }

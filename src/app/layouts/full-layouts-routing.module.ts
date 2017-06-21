@@ -9,10 +9,13 @@ import { ShowVideoComponent } from '../show-video/show-video.component';
 import { ForumComponent } from '../forum/forum.component';
 import { PostsComponent } from '../forum/posts/posts.component';
 
+import { AuthGuard } from '../auth-guard.service';
+
 const layoutsRoutes: Routes = [
     {
         path: '',
         component: FullLayoutsComponent,
+        canActivate: [AuthGuard],
         children: [
             {
                 path: 'home',

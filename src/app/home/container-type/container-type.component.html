@@ -1,6 +1,11 @@
 <div class="container-type">
   <div class="type-header">
     <span>{{name}}</span>
+    <ng-container *ngIf="filter">
+      <span *ngFor="let i of filter" class="type-filter">
+        {{i}}
+      </span>
+    </ng-container>
     <a href="" class="to-right">更多<i class="fa fa-angle-right"></i></a>
   </div>
   <ng-container *ngIf="first">

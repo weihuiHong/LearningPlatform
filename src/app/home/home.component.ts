@@ -6,10 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  containerTypeNameArr: Array<string> = [
-    '精选课程',
-    '免费好课',
-    'Java'
+  containerTypeNameArr: Array<Object> = [
+    {
+      title: '精选课程'
+    },
+    {
+      title: '免费好课',
+      filter: ['Java', 'PHP']
+    },
+    {
+      title: '实战推荐'
+    }
   ];
 
   courseItem: Object = {

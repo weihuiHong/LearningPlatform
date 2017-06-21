@@ -41,3 +41,8 @@ li {
   border: 1px solid #eee;
   overflow: hidden;
 }
+
+.to-center {
+  display: absolute;
+  transform: translateY(40%);
+}

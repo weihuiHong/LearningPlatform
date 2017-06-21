@@ -24,6 +24,8 @@ import { FullLayoutsService } from './full-layouts.service';
     declarations: [
         FullLayoutsComponent
     ],
-    providers: [FullLayoutsService]
+    providers: [
+      FullLayoutsService
+    ]
 })
 export class FullLayoutsModule { }
