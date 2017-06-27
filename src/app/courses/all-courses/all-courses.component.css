@@ -6,9 +6,15 @@
   border-bottom: none;
 }
 
-.course-more .coures-card-item{
-  float: left;
-  margin: 10px 0;
+.course-card-content{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.coures-card-item{
+  padding: 10px;
 }
 
 .course-more .breadcrumb{

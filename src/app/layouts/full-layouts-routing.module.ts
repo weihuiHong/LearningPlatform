@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullLayoutsComponent } from './full-layouts.component';
 
 import { HomeComponent } from '../home/home.component';
+import { NewsComponent } from '../home/news/news.component';
 import { CoursesComponent } from '../courses/courses.component';
 import { ShowVideoComponent } from '../show-video/show-video.component';
 import { ForumComponent } from '../forum/forum.component';
@@ -20,6 +21,10 @@ const layoutsRoutes: Routes = [
             {
                 path: 'home',
                 component: HomeComponent
+            },
+            {
+                path: 'news/:id',
+                component: NewsComponent
             },
             {
                 path: 'courses',

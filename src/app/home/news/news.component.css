@@ -21,6 +21,7 @@
   border-bottom: 1px solid #93999f;
   margin-top: 5px;
   padding: 0 0 6px 10px;
+  cursor: pointer;
 }
 
 .news-content .news-content-item:last-child {

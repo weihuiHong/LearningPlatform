@@ -9,8 +9,10 @@
       <li class="breadcrumb-item active"><a href=""></a>最新</li>
       <li class="breadcrumb-item"><a href=""></a>最热</li>
     </ol>
-    <div class="coures-card-item col-4" *ngFor="let courseItem of courseArr">
-      <h-card-course [courseItem]="courseItem"></h-card-course>
+    <div class="course-card-content">
+      <div class="coures-card-item" *ngFor="let courseItem of courseArr">
+        <h-card-course [courseItem]="courseItem"></h-card-course>
+      </div>
     </div>
     <nav aria-label="Page navigation example" class="col-12 to-left">
       <ul class="pagination">

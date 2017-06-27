@@ -7,6 +7,7 @@ import { ComponentModule } from '../component/component.module';
 import { HomeComponent } from './home.component';
 import { HomeSideComponent } from './home-side/home-side.component';
 import { ContainerTypeComponent } from './container-type/container-type.component';
+import { NewsListComponent } from './news/news-list.component';
 import { NewsComponent } from './news/news.component';
 
 import { HomeService } from './home.service';
@@ -21,6 +22,7 @@ import { HomeService } from './home.service';
     HomeComponent,
     HomeSideComponent,
     ContainerTypeComponent,
+    NewsListComponent,
     NewsComponent
   ],
   providers: [ HomeService ]
