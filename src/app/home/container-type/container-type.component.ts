@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ContainerTypeComponent {
   @Input() name: string;
-  @Input() courseItem: Object;
+  @Input() courseArr: Object;
   @Input() first: boolean;
   @Input() filter: Array<string>;
 }

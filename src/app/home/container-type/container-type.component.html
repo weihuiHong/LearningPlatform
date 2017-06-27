@@ -14,24 +14,27 @@
         <img src="assets/images/cardCourse.png" alt=""/>
       </div>
       <div class="type-content-item to-left">
-        <h-card-course [courseItem]="courseItem"></h-card-course>
+        <h-card-course [courseItem]="courseArr[1]"></h-card-course>
       </div>
     </div>
     <div class="type-content clearfix">
       <div class="type-content-item to-left">
-        <h-card-course [courseItem]="courseItem"></h-card-course>
+        <h-card-course [courseItem]="courseArr[2]"></h-card-course>
       </div>
       <div class="type-content-item to-left">
-        <h-card-course [courseItem]="courseItem"></h-card-course>
+        <h-card-course [courseItem]="courseArr[3]"></h-card-course>
       </div>
       <div class="type-content-item to-left">
-        <h-card-course [courseItem]="courseItem"></h-card-course>
+        <h-card-course [courseItem]="courseArr[4]"></h-card-course>
       </div>
     </div>
   </ng-container>
   <ng-container *ngIf="!first">
     <div class="type-content clearfix">
-      <div class="type-content-item to-left">
+      <div class="type-content-item to-left" *ngFor="let item of courseArr">
+        <h-card-course [courseItem]="item"></h-card-course>
+      </div>
+      <!--<div class="type-content-item to-left">
         <h-card-course [courseItem]="courseItem"></h-card-course>
       </div>
       <div class="type-content-item to-left">
@@ -39,10 +42,7 @@
       </div>
       <div class="type-content-item to-left">
         <h-card-course [courseItem]="courseItem"></h-card-course>
-      </div>
-      <div class="type-content-item to-left">
-        <h-card-course [courseItem]="courseItem"></h-card-course>
-      </div>
+      </div>-->
     </div>
   </ng-container>
 </div>

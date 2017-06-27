@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean = true;
 
   constructor (private router: Router) { }
 
