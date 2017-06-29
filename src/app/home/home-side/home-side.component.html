@@ -1,6 +1,16 @@
 <div class="side">
   <ul class="side-list">
-    <li class="side-item">
+    <li class="side-item" *ngFor="let item of homeSideArr">
+      <div class="side-item-head">
+        {{item['navigationName']}}
+      </div>
+      <div class="side-item-content">
+        <div *ngFor="let i of item['tagList']">
+          {{i['tagName']}}
+        </div>
+      </div>
+    </li>
+    <!-- <li class="side-item">
       <div class="side-item-head">
         <span>后端开发</span>
         <a href="">Python</a>
@@ -104,8 +114,8 @@
         后端开发<br/>
         课程推荐<br/>
       </div>
-    </li>
+    </li> -->
   </ul>
-  <button type="button" class="btn btn-secondary side-btn">学习路径</button>
-  <button type="button" class="btn btn-secondary side-btn">软件库</button>
+  <!-- <button type="button" class="btn btn-secondary side-btn">学习路径</button>
+  <button type="button" class="btn btn-secondary side-btn">软件库</button> -->
 </div>

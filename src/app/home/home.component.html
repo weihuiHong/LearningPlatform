@@ -25,11 +25,31 @@
       <span class="sr-only">Next</span>
     </a> -->
   </div>
-  <h-home-side></h-home-side>
+  <div class="home-side">
+    <h-home-side></h-home-side>
+  </div>
   <div class="row home-content">
-    <div class="col-9">
+    <div class="col-9" *ngIf="featuredCourse.length == 5">
       <div class="title">
         精品课程
+      </div>
+      <div class="row">
+        <div class="col-8 image">
+          <img src="assets/images/cardCourse.png"/>
+        </div>
+        <div class="col-4">
+          <h-card-course [courseItem]="featuredCourse[1]"></h-card-course>
+        </div>
+      </div>
+      <!-- <div class="home-card">
+        <div class="home-card-item" *ngFor="let item of featuredCourse.slice(2, featuredCourse.length)">
+          <h-card-course [courseItem]="item"></h-card-course>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-4" *ngFor="let item of featuredCourse.slice(2, featuredCourse.length)">
+          <h-card-course [courseItem]="item"></h-card-course>
+        </div>
       </div>
       <!-- <div class="featured">
         <div class="featured-img">

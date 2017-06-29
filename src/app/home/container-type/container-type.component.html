@@ -2,7 +2,7 @@
   <span class="title">{{title}}</span>
   <ng-container *ngIf="filter">
     <span *ngFor="let item of filter" class="filter" (click)="getfilterStr(item)">
-      {{item}}
+      {{item['tagName']}}
     </span>
   </ng-container>
   <a href="" class="to-right more">更多<i class="fa fa-angle-right"></i></a>

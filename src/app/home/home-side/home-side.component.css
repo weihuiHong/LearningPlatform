@@ -4,6 +4,7 @@
   height: 460px;
   z-index: 20;
   background-color: rgba(37,37,37,.36);
+  /*overflow-y: auto;*/
 }
 
 .side-item {
@@ -15,6 +16,10 @@
   padding: 18px 12px 15px;
   margin: -1px 10px 0 10px;
   border-bottom: 1px solid white;
+}
+
+.side-list .side-item:last-child .side-item-head{
+  border-bottom: none !important;
 }
 
 .side-item-content {
@@ -41,13 +46,13 @@
   display: block;
 }
 
-.side-list .side-item:nth-child(6) .side-item-content{
+/*.side-list .side-item:nth-child(6) .side-item-content{
   top: -8px;
 }
 
 .side-list .side-item:nth-child(7) .side-item-content{
   top: -65px;
-}
+}*/
 
 .side-btn {
   width: 75px;

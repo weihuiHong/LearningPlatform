@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit{
   freeVideoArr: Array<Object> = [];
   freeAudioArr: Array<Object> = [];
   freePPTArr: Array<Object> = [];
-  filterArr: Array<String> = ['java', 'php'];
+  filterArr: Array<string> = [];
 
   constructor (private service: HomeService) { }
 
@@ -28,6 +28,9 @@ export class HomeComponent implements OnInit{
       this.freeVideoArr = data['videoList'];
       this.freeAudioArr = data['audioList'];
       this.freePPTArr = data['pptList'];
+    });
+    this.service.getFreeFilterArr().then(data => {
+      this.filterArr = data;
     });
   }
 

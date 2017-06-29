@@ -27,26 +27,33 @@
 
 .title {
   font-size: 23px;
-}
-
-/*.featured {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.featured-img {
-  flex: 2;
-}
-
-.featured-img img {
-  width: 100%;
-}*/
-
-.featired-item {
-  flex: 1;
+  margin-bottom: 10px;
 }
 
 .home-content {
   margin-top: 10px;
+}
+
+.home-content .row {
+  margin-bottom: 35px;
+}
+
+.home-content .row:last-child {
+  margin-bottom: 10px;
+}
+
+.home-content .image {
+  height: 220px;
+  padding-right: 40px;
+}
+
+.home-content .image img {
+  height: 220px;
+  width: 100%;
+}
+
+@media (max-width: 48em) {
+  .home-side {
+    display: none;
+  }
 }
