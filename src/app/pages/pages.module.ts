@@ -10,6 +10,8 @@ import { RegisterComponent } from './register.component';
 
 import { RepeatPassDirective } from './repeat-pass.directive';
 
+import { PagesService } from './pages.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { RepeatPassDirective } from './repeat-pass.directive';
     LoginComponent,
     RegisterComponent,
     RepeatPassDirective
-  ]
+  ],
+  providers: [PagesService]
 })
 export class PagesModule { }

@@ -1,0 +1,23 @@
+.out-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /*padding: 15px;
+    background-color: white;*/
+}
+
+.card {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button {
+    width: 100%;
+}
+
+a {
+    
+}

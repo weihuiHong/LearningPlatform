@@ -1,56 +1,45 @@
-<div class="app flex-row align-items-center">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card-group mb-0">
-          <div class="card p-4">
-            <form #registerForm="ngForm" autocomplete="off">
-              <div class="card-block">
-                <h1>注册</h1>
-                <p class="text-muted">Sign up to your account</p>
-                <div class="input-group mb-3">
-                  <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                  <input type="text" class="form-control" placeholder="请输入用户名" name="nameInput" [(ngModel)]="name" required/>
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                  <input type="password" class="form-control" placeholder="请输入密码" name="passInput" [(ngModel)]="pass" required/>
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-addon"><i class="fa fa-repeat fa-fw"></i></span>
-                  <input type="password" class="form-control" placeholder="请重复密码" name="repeatPassInput" [(ngModel)]="repeatPass" required/>
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                  <input type="text" class="form-control" placeholder="请输入邮箱" name="emailInput" [(ngModel)]="email" pattern="\w+\@\w+(\.\w+)*\.(com|net|edu|cn|info|gov|au)$" required/>
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                  <input type="text" class="form-control" placeholder="请输入手机号" name="phoneInput" [(ngModel)]="phone" minlength="11" maxlength="11" required/>
-                </div>
-                <div class="input-group mb-4">
-                  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                  <input type="text" class="form-control" placeholder="请输入工号" name="jobNumInput" [(ngModel)]="jobNum" required/>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <button type="button" class="btn btn-primary px-4" [disabled]="!registerForm.form.valid">注册</button>
-                  </div>
-                </div>
-              </div>
-            </form>
+<div class="out-panel">
+  <div class="card col-md-3">
+    <form #registerForm="ngForm" autocomplete="off">
+      <div class="card-block">
+        <h1 class="mb-3">注册</h1>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+          <input type="text" class="form-control" placeholder="请输入姓名" name="realNameInput" [(ngModel)]="realName" (blur)="toRealNameAndJobNum(realName, jobNum)" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-bookmark fa-fw"></i></span>
+          <input type="text" class="form-control" placeholder="请输入工号" name="jobNumInput" [(ngModel)]="jobNum" (blur)="toRealNameAndJobNum(realName, jobNum)" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+          <input type="text" class="form-control" placeholder="请输入用户名" name="nameInput" [(ngModel)]="name" (blur)="toOnlyUsername(name)" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+          <input type="password" class="form-control" placeholder="请输入密码" name="passInput" [(ngModel)]="pass" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-repeat fa-fw"></i></span>
+          <input type="password" class="form-control" placeholder="请重复密码" name="repeatPassInput" [(ngModel)]="repeatPass" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+          <input type="text" class="form-control" placeholder="请输入邮箱" name="emailInput" [(ngModel)]="email" pattern="\w+\@\w+(\.\w+)*\.(com|net|edu|cn|info|gov|au)$" required/>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+          <input type="text" class="form-control" placeholder="请输入手机号" name="phoneInput" [(ngModel)]="phone" minlength="11" maxlength="11" required/>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <button type="button" class="btn btn-primary px-4" [disabled]="!registerForm.form.valid" (click)="toRegister(realName, jobNum, name, pass, email, phone)">注册</button>
           </div>
-          <div class="card card-inverse card-primary py-5 d-md-down-none" style="width:44%">
-            <div class="card-block text-center">
-              <div>
-                <h2>登录</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button type="button" class="btn btn-primary active mt-3" routerLink="/login">立即登录</button>
-              </div>
-            </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-link px-0" routerLink="/login">立即登录</button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import { LocalStorageModule } from 'angular-2-local-storage';
+
 import { AppRoutingModule } from './app.routing';
 import { PagesModule } from './pages/pages.module';
 
@@ -21,7 +23,11 @@ import { AuthService } from './auth.service';
     HttpModule,
     JsonpModule,
     PagesModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LocalStorageModule.withConfig({
+      prefix: 'LearningPlatform',
+      storageType: 'localStorage'
+    })
   ],
   providers: [
     AuthService,
