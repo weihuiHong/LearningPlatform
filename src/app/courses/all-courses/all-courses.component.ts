@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, DoCheck } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { CoursesService } from '../courses.service';
 
@@ -14,23 +14,19 @@ export class AllCoursesComponent implements OnInit{
   private courseArr: Array<Object> = [];
   private totalPage: Array<any> = [];
   private nowPage = 1;
-  private type = 1;
-  private tag = '';
+  private type = 0;//文件格式
+  private tag = '';//文件类型
   private maxTime = '';
   private minTime = '';
-  private newest = 1;
+  private newest = 1;//1是最新，0是最热
 
   constructor (private service: CoursesService) { }
 
-  // ngDoCheck () {
-  //   if (this.parentType && this.parentTag) {
-  //     this.type = this.parentType;
-  //     this.tag = this.parentTag;
-  //     this.toChgCourse(this.type, this.tag, this.maxTime, this.minTime, this.newest, this.nowPage);
-  //   }
-  // }
-
   ngOnInit () {
+    if (this.parentType && this.parentTag) {
+      this.type = this.parentType;
+      this.tag = this.parentTag;
+    }
     this.service.getTagArr().then(data => {
       this.labelTagArr.push({
         labelId: 0,
@@ -38,22 +34,24 @@ export class AllCoursesComponent implements OnInit{
         tagArr: [
           {
             id: '1',
-            tagName: 'PPT'
+            tagName: 'VideoPPT'
           },
           {
             id: '2',
-            tagName: 'Video'
+            tagName: 'Audio'
           },
           {
             id: '3',
-            tagName: 'Audio'
+            tagName: 'PPT'
           }
-        ]
+        ],
+        nowTag: this.type
       });
       this.labelTagArr.push({
         labelId: 1,
         labelName: '类型',
-        tagArr: data
+        tagArr: data,
+        nowTag: this.tag
       });
       this.labelTagArr.push({
         labelId: 2,
@@ -71,7 +69,8 @@ export class AllCoursesComponent implements OnInit{
             id: '3',
             tagName: '10分钟以内'
           }
-        ]
+        ],
+        nowTag: null
       });
     });
     

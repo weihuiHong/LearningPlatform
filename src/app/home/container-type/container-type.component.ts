@@ -10,11 +10,12 @@ export class ContainerTypeComponent{
   @Input() title: string;
   @Input() courseArr: Array<Object>;
   @Input() filter: Array<string>;
+  @Input() id: string;
   @Output() toFilter = new EventEmitter<boolean>();
 
   constructor (private router: Router) { }
 
-  getfilterStr (str) {
-    this.router.navigate(['/courses', {parentType: 1, parentTag: 1}]);
+  getfilterStr (tag) {
+    this.router.navigate(['/courses', {parentType: this.id, parentTag: tag}]);
   }
 }

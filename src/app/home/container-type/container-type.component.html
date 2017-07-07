@@ -1,7 +1,7 @@
 <div>
   <span class="title">{{title}}</span>
   <ng-container *ngIf="filter">
-    <span *ngFor="let item of filter" class="filter" (click)="getfilterStr(item)">
+    <span *ngFor="let item of filter" class="filter" (click)="getfilterStr(item['id'])">
       {{item['tagName']}}
     </span>
   </ng-container>
