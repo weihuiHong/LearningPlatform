@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FullLayoutsService } from './full-layouts.service';
+import { Url } from '../interface';
 
 @Component({
   selector: 'h-full-layouts',
@@ -15,6 +16,16 @@ export class FullLayoutsComponent implements OnInit{
   ngOnInit () {
     this.service.getNav().then(data => {
       this.menuItem = data;
+    });
+  }
+
+  toLogout () {
+    this.service.toLogout();
+  }
+
+  toSearch (str: string) {
+    this.service.toSearch(str).then(data => {
+      console.log(data);
     });
   }
 }

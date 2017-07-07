@@ -11,6 +11,7 @@ import { NewsListComponent } from './news/news-list.component';
 import { NewsComponent } from './news/news.component';
 
 import { HomeService } from './home.service';
+import { AuthService } from '../auth.service';
 
 @NgModule({
   imports: [
@@ -25,6 +26,6 @@ import { HomeService } from './home.service';
     NewsListComponent,
     NewsComponent
   ],
-  providers: [ HomeService ]
+  providers: [ HomeService, AuthService ]
 })
 export class HomeModule { }

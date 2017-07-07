@@ -3,8 +3,8 @@
     {{labelTag.labelName}}
   </div>
   <div class="label-name to-left">
-    <span class="active to-left">全部</span>
-    <span class="to-left" *ngFor="let item of labelTag.tagArr">
+    <span class="active to-left" (click)="sendParent(labelTag.labelId, 0)" [class.active]="idActive == 0">全部</span>
+    <span class="to-left" *ngFor="let item of labelTag.tagArr" (click)="sendParent(labelTag.labelId, item.id)" [class.active]="idActive == item.id">
       {{item.tagName}}
     </span>
   </div>

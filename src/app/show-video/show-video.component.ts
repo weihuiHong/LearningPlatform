@@ -11,17 +11,19 @@ import { ShowVideoService } from './show-video.service';
 })
 export class ShowVideoComponent implements OnInit{
   private commentArr: Array<Object> = [];
+  private id: string;
   private src: string;
 
   constructor (private service: ShowVideoService, private route: ActivatedRoute,) { }
 
   ngOnInit () {
     this.route.params
-      .switchMap((params: Params) => <string>params['src'])
-      .subscribe(src => { this.src = src });
-    
-    this.service.getCommentArr().then(data => {
-      this.commentArr = data;
-    });
+        .switchMap((params: Params) => this.service.getResourceById(params['id']))
+        .subscribe(data => {
+          this.src = data['src'];
+          this.service.getCommentArr(data['id']).then(data1 => {
+            this.commentArr = data1;
+          });
+        });
   }
 }

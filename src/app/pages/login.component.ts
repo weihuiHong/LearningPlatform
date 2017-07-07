@@ -15,7 +15,10 @@ export class LoginComponent {
 
   toLogin (username: string, password: string) {
     this.service.login(username, password).then(data => {
-      this.authService.login('123456');
+      console.log(data);
+      if (data['success']) {
+        this.authService.login(data['resultObject']['token'], data['resultObject']['userId']);
+      }
     });
   }
 }

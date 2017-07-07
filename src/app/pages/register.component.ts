@@ -12,7 +12,7 @@ export class RegisterComponent {
   toOnlyUsername (username: string) {
     if (username != '' && username != undefined) {
       this.service.judgementOnlyUsername(username).then(data => {
-        console.log(username);
+        console.log(data);
       });
     }
   }
@@ -20,14 +20,14 @@ export class RegisterComponent {
   toRealNameAndJobNum (realName: string, jobNum: string) {
     if (realName != '' && realName != undefined && jobNum != '' && jobNum != undefined) {
       this.service.judgementOnlyNameAndJobNum(realName, jobNum).then(data => {
-        console.log(realName + jobNum);
+        console.log(data);
       });
     }
   }
 
   toRegister (realName: string, jobNum: string, name: string, pass: string, email: string, phone: string) {
     this.service.register(realName, jobNum, name, pass, email, phone).then(data => {
-      console.log(realName + jobNum + name + pass + email + phone);
+      console.log(data);
     });
   }
 }

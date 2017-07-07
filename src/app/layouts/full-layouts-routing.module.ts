@@ -31,7 +31,7 @@ const layoutsRoutes: Routes = [
                 component: CoursesComponent
             },
             {
-                path: 'video/:src',
+                path: 'video/:id',
                 component: ShowVideoComponent
             },
             {

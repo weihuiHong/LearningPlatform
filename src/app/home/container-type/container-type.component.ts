@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'h-container-type',
@@ -11,7 +12,9 @@ export class ContainerTypeComponent{
   @Input() filter: Array<string>;
   @Output() toFilter = new EventEmitter<boolean>();
 
+  constructor (private router: Router) { }
+
   getfilterStr (str) {
-    this.toFilter.emit(str);
+    this.router.navigate(['/courses', {parentType: 1, parentTag: 1}]);
   }
 }

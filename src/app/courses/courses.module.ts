@@ -9,6 +9,7 @@ import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { LabelCourseComponent } from './all-courses/label-course.component';
 
 import { CoursesService } from './courses.service';
+import { AuthService } from '../auth.service';
 
 @NgModule({
   imports: [
@@ -21,6 +22,6 @@ import { CoursesService } from './courses.service';
     AllCoursesComponent,
     LabelCourseComponent
   ],
-  providers: [CoursesService]
+  providers: [CoursesService, AuthService]
 })
 export class CoursesModule { }

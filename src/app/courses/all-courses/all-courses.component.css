@@ -24,6 +24,7 @@
 
 .breadcrumb .breadcrumb-item {
   color: #787d82;
+  cursor: pointer;
 }
 
 .breadcrumb .breadcrumb-item.active {
