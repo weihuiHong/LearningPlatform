@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-lg-9 col-12">
+        <div class="whiteLabel">
+            <h2 class="ask-item">提问</h2>
+            <div class="row ask-item">
+                <div class="col-1">
+                    <span>标题</span>
+                </div>
+                <div class="col-11">
+                    <div class="input-group">
+                        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="请用一句话描述你的问题" aria-describedby="sizing-addon1"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row ask-item">
+                <div class="col-1">
+                    <span>正文</span>
+                </div>
+                <div class="col-11">
+                    <div [froalaEditor]="option" [(froalaModel)]="froalaText"></div>
+                </div>
+            </div>
+            <div class="row ask-item">
+                <div class="col-1">
+                    <span>板块</span>
+                </div>
+                <div class="col-11">
+                    <span>交流讨论</span>
+                    <span>技术分享</span>
+                </div>
+            </div>
+            <div class="row ask-item">
+                <div class="col-1">
+                    <span>校验</span>
+                </div>
+                <div class="col-11 clearfix">
+                    <input type="text" placeholder="请输入校验码" [(ngModel)]="check" name="check" aria-describedby="sizing-addon1"/>
+                    <button type="button" class="btn btn-secondary to-right" (click)="toRelease(title, froalaText, check)">发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-12">
+        <div class="whiteLabel">
+            提问的注意事项
+        </div>
+    </div>
+</div>

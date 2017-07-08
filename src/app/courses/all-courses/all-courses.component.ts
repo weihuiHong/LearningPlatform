@@ -14,7 +14,7 @@ export class AllCoursesComponent implements OnInit{
   private courseArr: Array<Object> = [];
   private totalPage: Array<any> = [];
   private nowPage = 1;
-  private type = 0;//文件格式
+  private type = 1;//文件格式
   private tag = '';//文件类型
   private maxTime = '';
   private minTime = '';
@@ -34,7 +34,7 @@ export class AllCoursesComponent implements OnInit{
         tagArr: [
           {
             id: '1',
-            tagName: 'VideoPPT'
+            tagName: 'Video'
           },
           {
             id: '2',
@@ -98,6 +98,16 @@ export class AllCoursesComponent implements OnInit{
 
   newOrHot (id) {
     this.newest = id;
+    this.toChgCourse(this.type, this.tag, this.maxTime, this.minTime, this.newest, this.nowPage);
+  }
+
+  goOtherPage (id) {
+    if (id < 1) {
+      id = this.totalPage.length;
+    } else if (id > this.totalPage.length) {
+      id = 1;
+    }
+    this.nowPage = id;
     this.toChgCourse(this.type, this.tag, this.maxTime, this.minTime, this.newest, this.nowPage);
   }
 }

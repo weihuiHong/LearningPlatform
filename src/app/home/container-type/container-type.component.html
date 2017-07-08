@@ -5,7 +5,7 @@
       {{item['tagName']}}
     </span>
   </ng-container>
-  <a href="" class="to-right more">更多<i class="fa fa-angle-right"></i></a>
+  <a class="to-right more" (click)="goMore()">更多<i class="fa fa-angle-right"></i></a>
 </div>
 <div class="home-course">
   <div class="home-course-item" *ngFor="let item of courseArr">

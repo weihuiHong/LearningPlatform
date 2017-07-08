@@ -1,56 +1,48 @@
 <div class="row">
-    <div class="col-9">
+    <div class="col-lg-9 col-12">
         <div class="whiteLabel">
             <div class="forum-nav">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">全部</a>
+                        <a class="nav-link" (click)="chgQuestionArr(0)" [class.nav-active]="typeActive==0">全部</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">交流讨论</a>
+                        <a class="nav-link" (click)="chgQuestionArr(1)" [class.nav-active]="typeActive==1">交流讨论</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">技术分享</a>
+                        <a class="nav-link" (click)="chgQuestionArr(2)" [class.nav-active]="typeActive==2">技术分享</a>
                     </li>
                 </ul>
             </div>
             <div class="forum">
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
-                </div>
-                <div class="question">
-                    <h-question></h-question>
+                <div class="question" *ngFor="let item of questionArr">
+                    <h-question [question]="item"></h-question>
                 </div>
             </div>
+            <nav aria-label="Page navigation example" class="col-12 to-left">
+                <ul class="pagination">
+                    <li class="page-item" *ngIf="nowPage != 1">
+                        <a class="page-link" aria-label="Previous" (click)="toOtherPage(nowPage - 1)">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <ng-container *ngFor="let item of totalPage;let i=index">
+                        <li class="page-item" [class.active]="(i + 1) == nowPage" (click)="toOtherPage(i + 1)"><a class="page-link">{{i + 1}}</a></li>  
+                    </ng-container>
+                    <li class="page-item" *ngIf="nowPage != totalPage.length">
+                        <a class="page-link" aria-label="Next" (click)="toOtherPage(nowPage + 1)">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="col-3">
+    <div class="col-lg-3 col-12">
         <div class="whiteLabel">
-            右边
+            <button class="btn btn-outline-success" (click)="goAsk()">发帖</button>
         </div>
     </div>
 </div>

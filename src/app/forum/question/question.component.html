@@ -1,32 +1,36 @@
-<div class="row question">
+<div class="row question" *ngIf="question">
     <div class="col-1">
         <div class="image">
             <img src="assets/images/question.jpg" alt=""/>
         </div>
     </div>
     <div class="col-9">
-        <div class="title" (click)="goDetail()">
+        <!--<div class="title" (click)="goDetail()">
             这是什么情况
-        </div>
+        </div>-->
+        <a class="title" href="/posts" target="_blank">
+            {{question['title']}}
+        </a>
         <div class="info">
-            <button type="button" class="btn btn-secondary" (click)="goDetail()">撰写答案</button>
+            <!--<button type="button" class="btn btn-secondary" (click)="goDetail()">撰写答案</button>-->
+            <a href="/posts" class="btn btn-secondary" target="_blank">撰写答案</a>
             <span class="questioner">
-                mrn_huang
+                {{question['questioner']}}
             </span>
             <span class="time">
-                1天前
+                {{question['time']}}
             </span>
             <span>
                 最后回复
             </span>
             <span class="respondent">
-                Cloud君
+                {{question['lastAnswer']}}
             </span>
         </div>
     </div>
     <div class="col-1">
         <div class="num">
-            0
+            {{question['replyNum']}}
         </div>
         <div class="num-name">
             回复
@@ -34,7 +38,7 @@
     </div>
     <div class="col-1">
         <div class="num">
-            5
+            {{question['viewNum']}}
         </div>
         <div class="num-name">
             查看

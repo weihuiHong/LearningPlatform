@@ -9,6 +9,7 @@ import { CoursesComponent } from '../courses/courses.component';
 import { ShowVideoComponent } from '../show-video/show-video.component';
 import { ForumComponent } from '../forum/forum.component';
 import { PostsComponent } from '../forum/posts/posts.component';
+import { AskComponent } from '../forum/ask/ask.component';
 
 import { AuthGuard } from '../auth-guard.service';
 
@@ -37,6 +38,10 @@ const layoutsRoutes: Routes = [
             {
                 path: 'forum',
                 component: ForumComponent
+            },
+            {
+                path: 'ask',
+                component: AskComponent
             },
             {
                 path: 'posts',

@@ -35,6 +35,8 @@
                 </div>
             </div>
         </div>
+        <div [froalaEditor]="option" [(froalaModel)]="froalaText"></div>
+        <button type="button" class="btn btn-secondary" (click)="commitComment(froalaText)">确定</button>
     </div>
     <div class="col-3">
         <div class="whiteLabel">

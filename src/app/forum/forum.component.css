@@ -1,8 +1,32 @@
 .forum-nav {
-    border-bottom: 1px solid #d0d6d9;
+    border-bottom: 2px solid #d0d6d9;
 }
 
 .question {
     padding: 20px 10px;
     border-bottom: 1px solid #d0d6d9;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link.nav-active {
+    border-bottom: 2px solid rgba(0,204,153,.7);;
+    margin-bottom: -2px;
+}
+
+nav {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+nav ul {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-link {
+    cursor: pointer;
 }

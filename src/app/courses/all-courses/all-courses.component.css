@@ -49,3 +49,7 @@ nav ul {
   border: 1px solid #eee;
   overflow: hidden;
 }
+
+.page-link {
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ import { LocalStorageService } from 'angular-2-local-storage';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean = true;
   token: string = '';
 
   constructor (

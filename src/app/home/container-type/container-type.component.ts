@@ -18,4 +18,8 @@ export class ContainerTypeComponent{
   getfilterStr (tag) {
     this.router.navigate(['/courses', {parentType: this.id, parentTag: tag}]);
   }
+
+  goMore () {
+    this.router.navigate(['/courses', {parentType: this.id, parentTag: 0}]);
+  }
 }
