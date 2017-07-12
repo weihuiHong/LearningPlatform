@@ -1,6 +1,24 @@
 <div class="video">
-  <video controls preload name="media" width="820" *ngIf="src">
+  <!--<ng-container *ngIf="type='1'">-->
+    <video controls preload name="media" width="820" *ngIf="src">
       <!--<source id="mp4" src="http://123.56.142.32:8080/video/music.mp4" type="video/mp4">-->
-       <source id="mp4" src="{{src}}" type="video/mp4"/> 
-  </video>
+      <source id="mp4" src="{{src}}" type="video/mp4"/> 
+    </video>
+    <embed height="400" pluginspage="http://www.macromedia.com/go/getflashplayer" 
+      wmode="transparent" quality="high" 
+      src="http://swf.ppt20.com/2017/0608/flv_2017060804370412623866.swf" 
+      type="application/x-shockwave-flash" width="820"/>
+    <!--</embed>-->
+  <!--</ng-container>-->
+  <!--<ng-container *ngIf="type='2'">
+    <embed height="400" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" quality="high" src="http://swf.ppt20.com/2017/0608/flv_2017060804370412623866.swf" type="application/x-shockwave-flash" width="650">
+    </embed>
+  </ng-container>
+  <ng-container *ngIf="type='3'">
+    <audio controls>
+      <source src="http://www.runoob.com/try/demo_source/horse.ogg" >
+      <source src="http://www.runoob.com/try/demo_source/horse.mp3" >
+      您的浏览器不支持 audio 元素。
+    </audio>
+  </ng-container>-->
 </div>

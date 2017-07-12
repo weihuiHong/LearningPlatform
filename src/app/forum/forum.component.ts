@@ -21,16 +21,16 @@ export class ForumComponent implements OnInit{
 
     ngOnInit () {
         this.service.getQuestions(this.typeActive, this.nowPage).then(data => {
-            this.questionArr = data['questions'];
-            this.totalPage.length = data['page'];
+            this.questionArr = data['postingList'];
+            this.totalPage.length = Math.ceil(data['total'] / 10);
         });
     }
 
     chgQuestionArr (id) {
         this.typeActive = id;
         this.service.getQuestions(this.typeActive, this.nowPage).then(data => {
-            this.questionArr = data['questions'];
-            this.totalPage.length = data['page'];
+            this.questionArr = data['postingList'];
+            this.totalPage.length = Math.ceil(data['total'] / 10);
         });
     }
 
@@ -42,8 +42,8 @@ export class ForumComponent implements OnInit{
         }
         this.nowPage = now;
         this.service.getQuestions(this.typeActive, this.nowPage).then(data => {
-            this.questionArr = data['questions'];
-            this.totalPage.length = data['page'];
+            this.questionArr = data['postingList'];
+            this.totalPage.length = Math.ceil(data['total'] / 10);
         });
     }
 

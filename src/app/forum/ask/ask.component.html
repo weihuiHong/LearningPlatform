@@ -25,17 +25,17 @@
                     <span>板块</span>
                 </div>
                 <div class="col-11">
-                    <span>交流讨论</span>
-                    <span>技术分享</span>
+                    <input type="radio" name="type" [(ngModel)]="type" value="1" checked/>交流讨论
+                    <input type="radio" name="type" [(ngModel)]="type" value="2"/>技术分享
                 </div>
             </div>
             <div class="row ask-item">
-                <div class="col-1">
+                <!--<div class="col-1">
                     <span>校验</span>
-                </div>
-                <div class="col-11 clearfix">
-                    <input type="text" placeholder="请输入校验码" [(ngModel)]="check" name="check" aria-describedby="sizing-addon1"/>
-                    <button type="button" class="btn btn-secondary to-right" (click)="toRelease(title, froalaText, check)">发布</button>
+                </div>-->
+                <div class="col-12 clearfix">
+                    <!--<input type="text" placeholder="请输入校验码" [(ngModel)]="check" name="check" aria-describedby="sizing-addon1"/>-->
+                    <button type="button" class="btn btn-secondary to-right" (click)="toRelease(title, froalaText, type)">发布</button>
                 </div>
             </div>
         </div>

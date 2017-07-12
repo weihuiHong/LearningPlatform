@@ -20,12 +20,13 @@ export class AskComponent {
             tabSize: 4
         }
     };
+    type = 1;
 
     constructor (private service: ForumService) { }
 
-    toRelease (title, froalaText, check) {
-        this.service.toReleaseAsk(title, froalaText, check).then(data => {
-            console.log(title, froalaText, check);
+    toRelease (title, froalaText, type) {
+        this.service.toReleaseAsk(title, froalaText, 1).then(data => {
+            console.log(title, froalaText, type);
         });
     }
 }

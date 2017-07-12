@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PlayVideoComponent{
   @Input() src: string;
+  @Input() type: string;
 }

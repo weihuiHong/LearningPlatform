@@ -2,7 +2,16 @@
   <div class="video-show col-9">
     <div class="video-content">
       <div class="video-play">
-        <h-play-video [src]="src"></h-play-video>
+        <!--<ng-container *ngIf="type='1'">
+          <h-play-video [src]="src"></h-play-video>
+        </ng-container>-->
+        <h-play-video [src]="src" [type]="type"></h-play-video>
+        <!--<ng-container *ngIf="type='2'">
+          <h-play-ppt [src]="src"></h-play-ppt>
+        </ng-container>
+        <ng-container *ngIf="type='3'">
+          <h-play-audio [src]="src"></h-play-audio>
+        </ng-container>-->
       </div>
       <div class="video-comment whiteLabel">
         最新评论

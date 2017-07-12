@@ -17,7 +17,7 @@ export class LoginComponent {
     this.service.login(username, password).then(data => {
       console.log(data);
       if (data['success']) {
-        this.authService.login(data['resultObject']['token'], data['resultObject']['userId']);
+        this.authService.login(data['resultObject']['token'], data['resultObject']['userId'], data['resultObject']['name']);
       }
     });
   }

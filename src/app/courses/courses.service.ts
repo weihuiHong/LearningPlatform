@@ -28,7 +28,7 @@ export class CoursesService {
                         '?type=' + type + '&newest=' + newest + '&tagId=' + tag + 
                         '&pageSize=12&pageNum=' + pageNum + 
                         '&token=' + this.authService.getToken() + '&userId=' + 
-                        this.authService.getUserId())
+                        this.authService.getUserId() + '&maxLength=200' + '&minLength=10')
                     .toPromise()
                     .then(res => <Array<Object>>res.json())
                     .then(data => { return data; });

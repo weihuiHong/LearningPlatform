@@ -14,7 +14,7 @@ export class AllCoursesComponent implements OnInit{
   private courseArr: Array<Object> = [];
   private totalPage: Array<any> = [];
   private nowPage = 1;
-  private type = 1;//文件格式
+  private type = 0;//文件格式
   private tag = '';//文件类型
   private maxTime = '';
   private minTime = '';

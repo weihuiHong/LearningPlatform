@@ -8,20 +8,24 @@ import { Url } from '../interface';
 export class PagesService {
     constructor (private http: Http) { }
 
-    judgementOnlyUsername (username: string) {
-        // let headers = new Headers({ 
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Access-Control-Request-Headers': '*'
-        // });
-        // let options = new RequestOptions({ headers: headers });
-        // return this.http.post(Url.get('checkUsername'), { username: username }, options)
-        //                 .toPromise()
-        //                 .then(res => <Object>res.json())
-        //                 .then(data => { return data; });
-        return this.http.get(Url.get('checkUsername') + '?username=' + username)
+    judgementOnlyUsername (username1: string) {
+        let headers = new Headers({ 
+            // 'origin': 'http://192.168.1.108',
+            // "Content-Type": "application/x-www-form-urlencoded"
+            // 'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
+            // 'Access-Control-Allow-Headers': '*'
+            // 'Access-Control-Request-Headers': '*'
+        });
+        let options = new RequestOptions({ headers: headers });
+        // return this.http.post(Url.get('checkUsername'), { 'username': username1 }, options)
+        return this.http.post(Url.get('checkUsername') + '?username=' + username1, options)
                         .toPromise()
                         .then(res => <Object>res.json())
                         .then(data => { return data; });
+        // return this.http.get(Url.get('checkUsername') + '?username=' + username)
+        //                 .toPromise()
+        //                 .then(res => <Object>res.json())
+        //                 .then(data => { return data; });
     }
 
     judgementOnlyNameAndJobNum (realName: string, jobNum: string) {

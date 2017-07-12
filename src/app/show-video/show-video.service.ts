@@ -9,7 +9,7 @@ export class ShowVideoService {
   constructor (private http: Http) { }
 
   getCommentArr (id: string) {
-    return this.http.get(Url.get('getResDiscuss') + '?getResDiscuss=' + id)
+    return this.http.get(Url.get('getResDiscuss') + '?resourceId=' + id)
                     .toPromise()
                     .then(res => <Array<Object>>res.json())
                     .then(data => { return data; });

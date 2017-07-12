@@ -5,7 +5,7 @@ import { LocalStorageService } from 'angular-2-local-storage';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn: boolean = true;
+  isLoggedIn: boolean = false;
   token: string = '';
 
   constructor (
@@ -19,6 +19,8 @@ export class AuthService {
         this.isLoggedIn = false;
         this.localStorageService.remove('token');
         this.localStorageService.remove('time');
+        this.localStorageService.remove('userId');
+        this.localStorageService.remove('name');
       } else {
         this.isLoggedIn = true;
       }
@@ -27,11 +29,12 @@ export class AuthService {
 
   redirectUrl: string;
 
-  login (token: string, userId: string) {
+  login (token: string, userId: string, name: string) {
     this.isLoggedIn = true;
     this.localStorageService.set('token', token);
     this.localStorageService.set('time', new Date());
     this.localStorageService.set('userId', userId);
+    this.localStorageService.set('name', name);
     this.router.navigate(['/home']);
   }
 
@@ -40,6 +43,7 @@ export class AuthService {
     this.localStorageService.remove('token');
     this.localStorageService.remove('time');
     this.localStorageService.remove('userId');
+    this.localStorageService.remove('name');
     this.router.navigate(['/login']);
   }
 
@@ -49,5 +53,9 @@ export class AuthService {
 
   getUserId () {
     return this.localStorageService.get('userId');
+  }
+
+  getUsername () {
+    return this.localStorageService.get('name');
   }
 }

@@ -1,4 +1,5 @@
 var ip: string = 'http://123.56.142.32:8080';
+// var ip: string = 'http://192.168.1.105:8080';
 
 export var Url: Map<string, string> = new Map();
 
@@ -20,5 +21,11 @@ Url.set('sideNav', ip + '/navigation/free/getNavigation');//左侧菜单栏
 Url.set('recommendedResource', ip + '/resource/getRecommendedResource');//获得推荐课程
 
 Url.set('search', ip + '/resource/free/SearchResByKeyWord');//搜索功能
+
+Url.set('postList', ip + '/posting/free/getPosting');//获得帖子列表
+Url.set('sendPost', ip + '/posting/post');//发帖
+Url.set('getPostingById', ip + '/posting/free/getPostingById');//根据id获得帖子
+Url.set('getPostingDis', ip + '/posting/free/getPostingDis');//获得帖子评论
+Url.set('response', ip + '/posting/free/response');//回复帖子
 
 Url.set('menu', ip + '/menu/menutree');

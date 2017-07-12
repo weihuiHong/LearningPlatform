@@ -12,6 +12,7 @@ import { ShowVideoService } from './show-video.service';
 export class ShowVideoComponent implements OnInit{
   private commentArr: Array<Object> = [];
   private id: string;
+  private type: string;
   private src: string;
 
   constructor (private service: ShowVideoService, private route: ActivatedRoute,) { }
@@ -21,6 +22,7 @@ export class ShowVideoComponent implements OnInit{
         .switchMap((params: Params) => this.service.getResourceById(params['id']))
         .subscribe(data => {
           this.src = data['src'];
+          this.type = data['type'];
           this.service.getCommentArr(data['id']).then(data1 => {
             this.commentArr = data1;
           });

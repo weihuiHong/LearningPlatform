@@ -44,7 +44,7 @@ const layoutsRoutes: Routes = [
                 component: AskComponent
             },
             {
-                path: 'posts',
+                path: 'posts/:id',
                 component: PostsComponent
             },
             {
