@@ -7,6 +7,8 @@ import { HomeComponent } from '../home/home.component';
 import { NewsComponent } from '../home/news/news.component';
 import { CoursesComponent } from '../courses/courses.component';
 import { ShowVideoComponent } from '../show-video/show-video.component';
+import { ShowPPTComponent } from '../show-video/show-ppt.component';
+import { ShowAudioComponent } from '../show-video/show-audio.component';
 import { ForumComponent } from '../forum/forum.component';
 import { PostsComponent } from '../forum/posts/posts.component';
 import { AskComponent } from '../forum/ask/ask.component';
@@ -17,7 +19,7 @@ const layoutsRoutes: Routes = [
     {
         path: '',
         component: FullLayoutsComponent,
-        canActivate: [AuthGuard],
+        
         children: [
             {
                 path: 'home',
@@ -29,11 +31,23 @@ const layoutsRoutes: Routes = [
             },
             {
                 path: 'courses',
-                component: CoursesComponent
+                component: CoursesComponent,
+                canActivate: [AuthGuard]
             },
             {
                 path: 'video/:id',
-                component: ShowVideoComponent
+                component: ShowVideoComponent,
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'audio/:id',
+                component: ShowAudioComponent,
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'ppt/:id',
+                component: ShowPPTComponent,
+                canActivate: [AuthGuard]
             },
             {
                 path: 'forum',
@@ -41,7 +55,8 @@ const layoutsRoutes: Routes = [
             },
             {
                 path: 'ask',
-                component: AskComponent
+                component: AskComponent,
+                canActivate: [AuthGuard]
             },
             {
                 path: 'posts/:id',

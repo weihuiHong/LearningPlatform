@@ -1,5 +1,5 @@
 <div class="card" *ngIf="courseItem">
-  <a href="#" [routerLink]="['/video', courseItem.id]">
+  <a (click)="goPlay(courseItem.type, courseItem.id)">
     <div class="card-img-top">
       <!--<img src="{{courseItem.image || 'assets/images/cardCourse.png'}}" alt=""/>-->
       <img src="assets/images/cardCourse.png" alt=""/>

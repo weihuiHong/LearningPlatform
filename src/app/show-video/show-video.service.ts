@@ -3,10 +3,14 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Url } from '../interface';
+import { AuthService } from '../auth.service';
 
 @Injectable()
 export class ShowVideoService {
-  constructor (private http: Http) { }
+  constructor (
+    private http: Http, 
+    private service: AuthService
+  ) { }
 
   getCommentArr (id: string) {
     return this.http.get(Url.get('getResDiscuss') + '?resourceId=' + id)
@@ -21,6 +25,15 @@ export class ShowVideoService {
 
   getResourceById (id: string) {
     return this.http.get(Url.get('getResourceById') + '?id=' + id)
+                    .toPromise()
+                    .then(res => <Object>res.json())
+                    .then(data => { return data; });
+  }
+
+  getRecommendCourse () {
+    return this.http.post(Url.get('recommendedResource') + 
+                          '?userId=' + this.service.getUserId() + 
+                          '&token=' + this.service.getToken(), null)
                     .toPromise()
                     .then(res => <Object>res.json())
                     .then(data => { return data; });

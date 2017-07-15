@@ -1,0 +1,60 @@
+<div class="image">
+    <img src="assets/images/cardCourse.png" alt=""/>
+</div>
+<div class="whiteLabel">
+    <h5 class="title">
+        推荐视频
+    </h5>
+    <div class="recommend">
+        <ng-container *ngIf="recommendVideoArr.length > 0">
+            <ul>
+                <li *ngFor="let item of recommendVideoArr">
+                    {{item['resourceName']}}
+                </li>
+            </ul>
+        </ng-container>
+        <ng-container *ngIf="recommendVideoArr.length == 0">
+            <div class="empty">
+                empty
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="whiteLabel">
+    <h5 class="title">
+        推荐音频
+    </h5>
+    <div class="recommend">
+        <ng-container *ngIf="recommendAudioArr.length > 0">
+            <ul>
+                <li *ngFor="let item of recommendAudioArr">
+                    {{item['resourceName']}}
+                </li>
+            </ul>
+        </ng-container>
+        <ng-container *ngIf="recommendAudioArr.length == 0">
+            <div class="empty">
+                empty
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="whiteLabel">
+    <h5 class="title">
+        推荐PPT
+    </h5>
+    <div class="recommend">
+        <ng-container *ngIf="recommendPPTArr.length > 0">
+            <ul>
+                <li *ngFor="let item of recommendPPTArr">
+                    {{item['resourceName']}}
+                </li>
+            </ul>
+        </ng-container>
+        <ng-container *ngIf="recommendPPTArr.length == 0">
+            <div class="empty">
+                empty
+            </div>
+        </ng-container>
+    </div>
+</div>

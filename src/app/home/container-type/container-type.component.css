@@ -3,13 +3,26 @@
 }
 
 .filter {
-  cursor: pointer;
+  margin-left: 10px;
 }
 
-.filter::after {
+.more {
+  color: #93999f!important;
+}
+
+.filter:hover, .more:hover {
+  cursor: pointer;
+  color: #4b96dc!important;
+}
+
+.filter::before {
   content: '|';
   display: inline-block;
+  color: black;
+  margin: 0 5px;
 }
+
+
 
 .home-course {
   display: flex;

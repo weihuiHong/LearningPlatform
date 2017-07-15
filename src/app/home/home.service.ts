@@ -43,10 +43,6 @@ export class HomeService {
                       .toPromise()
                       .then(res => <Object>res.json())
                       .then(data => { return data; });
-    // return this.http.get(Url.get('recommendedResource') + '?userId=1&token=' + this.authService.getToken())
-    //                 .toPromise()
-    //                 .then(res => <Array<Object>>res.json())
-    //                 .then(data => { return data; });
   }
 
   //获得免费课程的过滤词

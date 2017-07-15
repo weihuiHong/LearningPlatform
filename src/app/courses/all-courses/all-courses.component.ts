@@ -15,7 +15,7 @@ export class AllCoursesComponent implements OnInit{
   private totalPage: Array<any> = [];
   private nowPage = 1;
   private type = 0;//文件格式
-  private tag = '';//文件类型
+  private tag = 0;//文件类型
   private maxTime = '';
   private minTime = '';
   private newest = 1;//1是最新，0是最热
@@ -38,11 +38,11 @@ export class AllCoursesComponent implements OnInit{
           },
           {
             id: '2',
-            tagName: 'Audio'
+            tagName: 'PPT'
           },
           {
             id: '3',
-            tagName: 'PPT'
+            tagName: 'Audio'
           }
         ],
         nowTag: this.type

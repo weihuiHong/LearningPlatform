@@ -16,6 +16,8 @@
   padding: 18px 12px 15px;
   margin: -1px 10px 0 10px;
   border-bottom: 1px solid white;
+  color: white;
+  cursor: pointer;
 }
 
 .side-list .side-item:last-child .side-item-head{
@@ -40,10 +42,42 @@
 
 .side-item:hover .side-item-head {
   margin-top: -1px;
+  color: black;
+}
+
+.side-item:hover .side-item-head span:hover{
+  margin-top: -1px;
+  color: #4b96dc;
 }
 
 .side-item:hover .side-item-content {
   display: block;
+}
+
+.badge {
+  padding: 0.625rem;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.classify {
+  margin-bottom: 15px;
+}
+
+.classify span::before {
+  content: '|';
+  display: inline;
+  margin-left: 5px;
+  color: black;
+}
+
+.classify span:hover {
+  cursor: pointer;
+  color: #4b96dc;
+}
+
+.empty {
+  margin-left: 5px;
 }
 
 /*.side-list .side-item:nth-child(6) .side-item-content{

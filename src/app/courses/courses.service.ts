@@ -28,13 +28,16 @@ export class CoursesService {
                         '?type=' + type + '&newest=' + newest + '&tagId=' + tag + 
                         '&pageSize=12&pageNum=' + pageNum + 
                         '&token=' + this.authService.getToken() + '&userId=' + 
-                        this.authService.getUserId() + '&maxLength=200' + '&minLength=10')
+                        this.authService.getUserId() + '&maxLength=300' + '&minLength=1')
                     .toPromise()
                     .then(res => <Array<Object>>res.json())
                     .then(data => { return data; });
-    // return this.http.get(Url.get('recommendedResource') + '?userId=1&token=' + this.authService.getToken())
-    //                 .toPromise()
-    //                 .then(res => <Array<Object>>res.json())
-    //                 .then(data => { return data; });
+  }
+
+  getRecommendCourse () {
+    return this.http.get(Url.get('recommendedResource') + '?userId=1&token=' + this.authService.getToken())
+                    .toPromise()
+                    .then(res => <Array<Object>>res.json())
+                    .then(data => { return data; });
   }
 }

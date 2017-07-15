@@ -7,6 +7,7 @@ import { ComponentModule } from '../component/component.module';
 import { CoursesComponent } from './courses.component';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { LabelCourseComponent } from './all-courses/label-course.component';
+import { CourseSideComponent } from './course-side/course-side.component';
 
 import { CoursesService } from './courses.service';
 import { AuthService } from '../auth.service';
@@ -20,7 +21,8 @@ import { AuthService } from '../auth.service';
   declarations: [
     CoursesComponent,
     AllCoursesComponent,
-    LabelCourseComponent
+    LabelCourseComponent,
+    CourseSideComponent
   ],
   providers: [CoursesService, AuthService]
 })

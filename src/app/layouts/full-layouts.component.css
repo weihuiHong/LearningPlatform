@@ -1,8 +1,65 @@
+.layout {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
 .navbar {
   background-color: white;
   box-shadow: 0 0 4px 0 #ccc;
 }
 
 .container {
-  padding-top: 70px;
+  padding: 80px 0 70px;
+}
+
+img {
+  height: 40px;
+  position: relative;
+  top: -6px;
+}
+
+.nav-link {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #4b96dc!important;
+}
+
+.active {
+  color: #4b96dc!important;
+}
+
+.search {
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+.form-search {
+  position: relative;
+}
+
+.form-search .fa {
+  color: rgba(0,0,0,.5);
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form-search .fa:hover {
+  color: #4b96dc;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background: rgb(38, 38, 38);
+  color: rgb(135, 135, 135);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

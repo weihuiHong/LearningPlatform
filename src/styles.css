@@ -41,3 +41,14 @@ li {
   border: 1px solid #eee;
   overflow: hidden;
 }
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    font-size: 40px;
+    color:#bbb;
+    text-shadow: 0 1px 1px #fff; 
+    font-weight: 500;
+}

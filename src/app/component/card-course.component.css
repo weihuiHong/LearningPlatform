@@ -4,6 +4,7 @@
   box-shadow: 0 2px 2px 0 #eee;
   /*border-radius: 10px;*/
   border: none;
+  cursor: pointer;
 }
 
 .card a {

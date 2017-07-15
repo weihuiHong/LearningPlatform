@@ -1,0 +1,25 @@
+.title {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.recommend {
+    padding: 10px 10px 0 10px;
+}
+
+.recommend ul {
+    margin-bottom: 0;
+}
+
+.recommend li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.recommend li:hover {
+    color: #4b96dc;
+}
+
+.recommend li:last-child {
+    margin-bottom: 0;
+}
