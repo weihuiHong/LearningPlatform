@@ -1,3 +1,7 @@
+a:hover {
+  text-decoration: none;
+}
+
 .question .image {
     width: 50px;
     height: 50px;
@@ -7,6 +11,11 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    color: black;
+}
+
+.question .title:hover {
+    color: #4b96dc;
 }
 
 .question .info {
@@ -22,7 +31,16 @@
 }
 
 .question .info span {
-    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.num {
+    line-height: 30px;
+    text-align: center;
+}
+
+.num-name {
+    text-align: center;
 }
 
 .image img {

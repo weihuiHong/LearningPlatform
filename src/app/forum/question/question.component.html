@@ -5,15 +5,11 @@
         </div>
     </div>
     <div class="col-9">
-        <!--<div class="title" (click)="goDetail()">
-            这是什么情况
-        </div>-->
-        <a class="title" href="/posts" target="_blank" [routerLink]="['/posts', question.id]">
+        <a class="title" target="_blank" [routerLink]="['/posts', question.id]">
             {{question['title']}}
         </a>
         <div class="info">
-            <!--<button type="button" class="btn btn-secondary" (click)="goDetail()">撰写答案</button>-->
-            <a href="/posts" class="btn btn-secondary" target="_blank" [routerLink]="['/posts', question.id]">撰写答案</a>
+            <!--<a class="btn btn-secondary" target="_blank" [routerLink]="['/posts', question.id]">撰写答案</a>-->
             <span class="questioner">
                 {{question['presenter']}}
             </span>
@@ -38,4 +34,46 @@
             查看
         </div>
     </div>
+    <!--<div class="col-11">
+        <div class="row">
+            <div class="col-10">
+                <a class="title" target="_blank" [routerLink]="['/posts', question.id]">
+                    {{question['title']}}
+                </a>
+            </div>
+            <div class="col-1">
+                <div class="num">
+                    {{question['responseNum']}}
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num">
+                {{question['views']}}
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <div class="info">
+                    <a class="btn btn-secondary" target="_blank" [routerLink]="['/posts', question.id]">撰写答案</a>
+                    <span class="questioner">
+                        {{question['presenter']}}
+                    </span>
+                    <span class="time">
+                        {{question['publicationTime'] | date:'y-MM-dd H:mm'}}
+                    </span>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num-name">
+                    回复
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num-name">
+                    查看
+                </div>
+            </div>
+        </div>
+    </div>-->
 </div>
